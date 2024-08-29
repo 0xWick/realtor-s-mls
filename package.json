@@ -2,23 +2,40 @@
   "name": "mls-website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "addRandomUsers": "ts-node --swc --loader ts-node/esm --require tsconfig-paths/register scripts/addRandomUsers.ts",
+    "addRandomProperties": "ts-node --swc --loader ts-node/esm --require tsconfig-paths/register scripts/addRandomProperties.ts"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@faker-js/faker": "^8.4.1",
+    "@prisma/client": "^5.19.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "framer-motion": "^11.3.31",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.6.0",
+    "next": "14.2.7",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.7"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.16.2",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^5.5.4"
   }
 }
